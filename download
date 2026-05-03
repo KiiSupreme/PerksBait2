@@ -1,0 +1,333 @@
+import { createFileRoute } from '@tanstack/react-router'
+import { MapPin, Phone, Clock, Star, Anchor, ShieldCheck, Fish, BadgeDollarSign, Wrench } from 'lucide-react'
+
+export const Route = createFileRoute('/')({
+  component: Home,
+  head: () => ({
+    meta: [
+      { title: "Perk's Bait & Tackle | Lantana, FL" },
+      { name: 'description', content: 'Local bait shop in Lantana, FL. Live bait, saltwater & freshwater tackle, expert fishing advice and affordable prices.' }
+    ]
+  })
+})
+
+function Home() {
+  return (
+    <main className="flex flex-col">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-blue-900 py-24 sm:py-32">
+        <div className="absolute inset-0 z-0 opacity-20">
+          {/* Simple pattern/texture placeholder */}
+          <div className="h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:mx-0">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Your Trusted Bait & Tackle Shop in Lantana
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-blue-100">
+              Live bait, quality tackle, expert advice, and great prices for every fishing trip. Serving local fishermen and visitors since [Year].
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-6">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=302+Wickline+Blvd,+Lantana,+FL+33462"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all"
+              >
+                Get Directions
+              </a>
+              <a href="tel:5615823133" className="text-sm font-semibold leading-6 text-white hover:text-blue-200 transition-colors flex items-center gap-2">
+                <Phone className="h-4 w-4" /> Call Now (561) 582-3133
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Info Bar */}
+      <section className="bg-white border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="flex items-center gap-4">
+              <div className="rounded-lg bg-blue-50 p-3 text-blue-600">
+                <Star className="h-6 w-6 fill-current" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-slate-500">Google Rating</p>
+                <p className="text-lg font-bold text-slate-900">4.7 Stars (186+ Reviews)</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="rounded-lg bg-orange-50 p-3 text-orange-600">
+                <MapPin className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-slate-500">Location</p>
+                <p className="text-lg font-bold text-slate-900">302 Wickline Blvd, Lantana</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="rounded-lg bg-green-50 p-3 text-green-600">
+                <Clock className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-slate-500">Business Hours</p>
+                <p className="text-lg font-bold text-slate-900">Daily, Closes at 7 PM</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="rounded-lg bg-blue-50 p-3 text-blue-600">
+                <ShieldCheck className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-slate-500">Expertise</p>
+                <p className="text-lg font-bold text-slate-900">Local Fishing Knowledge</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Selling Points / Features */}
+      <section id="about" className="py-24 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center">
+            <h2 className="text-base font-semibold leading-7 text-blue-600">Everything You Need</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Built for Real Fishermen
+            </p>
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              Whether you're hitting the Intracoastal, heading offshore, or fishing local freshwater spots, we've got you covered with the best gear and freshest bait in town.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+              <div className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-slate-900">
+                  <Fish className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
+                  Live Bait & Fresh Stock
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
+                  <p className="flex-auto">Large selection of live bait for both saltwater and freshwater. We keep our stock fresh so you have the best chance of landing your catch.</p>
+                </dd>
+              </div>
+              <div className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-slate-900">
+                  <BadgeDollarSign className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
+                  Affordable Pricing
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
+                  <p className="flex-auto">Skip the big-box store markups. We offer competitive prices on all our tackle, accessories, and repairs.</p>
+                </dd>
+              </div>
+              <div className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-slate-900">
+                  <Wrench className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
+                  Quick Rod Repairs
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
+                  <p className="flex-auto">Broken eyelet or reel issues? Our staff provides fast, reliable rod fixes and maintenance to get you back on the water.</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      {/* Products & Services Section */}
+      <section id="products" className="py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center">
+            <h2 className="text-base font-semibold leading-7 text-blue-600">Our Inventory</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Quality Bait & Gear
+            </p>
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              We stock everything you need for a successful day on the water, from the freshest live bait to the most reliable tackle.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
+              <div className="rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <Fish className="h-6 w-6 text-blue-600" /> Live Bait
+                </h3>
+                <ul className="space-y-3 text-slate-600">
+                  <li className="flex items-center gap-2">• Shrimp (Live & Frozen)</li>
+                  <li className="flex items-center gap-2">• Mullet & Gizzard Shad</li>
+                  <li className="flex items-center gap-2">• Ballyhoo & Squid</li>
+                  <li className="flex items-center gap-2">• Worms & Crickets</li>
+                  <li className="flex items-center gap-2">• Daily Bait Availability Updates</li>
+                </ul>
+              </div>
+              <div className="rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <Anchor className="h-6 w-6 text-blue-600" /> Saltwater & Freshwater
+                </h3>
+                <ul className="space-y-3 text-slate-600">
+                  <li className="flex items-center gap-2">• Custom Lures & Jigs</li>
+                  <li className="flex items-center gap-2">• Hooks, Weights & Swivels</li>
+                  <li className="flex items-center gap-2">• Fluorocarbon & Monofilament</li>
+                  <li className="flex items-center gap-2">• Reels & Rods for All Skill Levels</li>
+                  <li className="flex items-center gap-2">• Tackle Boxes & Storage</li>
+                </ul>
+              </div>
+              <div className="rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <Wrench className="h-6 w-6 text-blue-600" /> Repair & Accessories
+                </h3>
+                <ul className="space-y-3 text-slate-600">
+                  <li className="flex items-center gap-2">• Quick Tip & Guide Replacement</li>
+                  <li className="flex items-center gap-2">• Reel Cleaning & Lubrication</li>
+                  <li className="flex items-center gap-2">• Coolers & Ice</li>
+                  <li className="flex items-center gap-2">• Fishing Licenses Help</li>
+                  <li className="flex items-center gap-2">• Local Spot Tips & Advice</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews / Testimonials Section */}
+      <section className="bg-slate-50 py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">What Local Fishermen Say</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">
+              Trusted by the Lantana community for years.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            {[
+              {
+                content: "Great prices and the best live bait selection in the area. The staff actually knows where the fish are biting!",
+                author: "Mike T.",
+                rating: 5,
+              },
+              {
+                content: "Fast rod repair! I brought in a broken guide and they had it fixed in no time. Very affordable compared to the big stores.",
+                author: "Sarah L.",
+                rating: 5,
+              },
+              {
+                content: "Authentic bait shop feel. Friendly, helpful, and they never try to oversell you. My go-to spot before every trip.",
+                author: "Captain John",
+                rating: 5,
+              },
+            ].map((review, i) => (
+              <div key={i} className="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200">
+                <div>
+                  <div className="flex gap-x-1 text-blue-600 mb-4">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-lg leading-7 text-slate-900 italic">"{review.content}"</p>
+                </div>
+                <div className="mt-6 flex items-center gap-x-4 border-t border-slate-100 pt-6">
+                  <div className="text-sm font-semibold leading-6 text-slate-900">{review.author}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="contact" className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-16 items-center">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Visit Us in Lantana</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-600">
+                We're located right near the water, ready to help you gear up for your next adventure.
+              </p>
+              
+              <dl className="mt-10 space-y-6 text-base leading-7 text-slate-600">
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <MapPin className="h-7 w-6 text-blue-600" aria-hidden="true" />
+                  </dt>
+                  <dd>
+                    302 Wickline Blvd<br />
+                    Lantana, FL 33462
+                  </dd>
+                </div>
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <Phone className="h-7 w-6 text-blue-600" aria-hidden="true" />
+                  </dt>
+                  <dd>
+                    <a className="hover:text-slate-900" href="tel:5615823133">
+                      (561) 582-3133
+                    </a>
+                  </dd>
+                </div>
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <Clock className="h-7 w-6 text-blue-600" aria-hidden="true" />
+                  </dt>
+                  <dd>
+                    Open Daily<br />
+                    Closes at 7:00 PM
+                  </dd>
+                </div>
+              </dl>
+
+              <div className="mt-10">
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=302+Wickline+Blvd,+Lantana,+FL+33462"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all"
+                >
+                  Get Directions
+                </a>
+              </div>
+            </div>
+            
+            <div className="h-[400px] w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 relative">
+              {/* Google Map Embed Placeholder - Real one would be an iframe */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                <MapPin className="h-12 w-12 text-slate-400 mb-4" />
+                <p className="text-slate-500 font-medium">302 Wickline Blvd, Lantana, FL 33462</p>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Perk%27s+Bait+%26+Tackle+Lantana+FL" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 text-blue-600 hover:underline text-sm font-semibold"
+                >
+                  View on Google Maps
+                </a>
+              </div>
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.629337583626!2d-80.05260192361665!3d26.58579997683416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8d73df7819897%3A0x6739d73d6b797897!2s302%20Wickline%20Blvd%2C%20Lantana%2C%20FL%2033462!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="relative z-10 opacity-90 grayscale hover:grayscale-0 transition-all"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 py-12 text-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
+            <p className="text-lg font-bold tracking-tight text-blue-400">
+              Perk's Bait & Tackle
+            </p>
+            <p className="text-sm leading-7 text-slate-400">
+              &copy; {new Date().getFullYear()} Perk's Bait & Tackle Shop. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  )
+}
