@@ -1,1 +1,0 @@
-zip -r project-backup.zip . -x "node_modules/*" ".git/*" "dist/*"
